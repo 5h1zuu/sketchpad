@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: beige;
+}
+
+
+
+.sketchpad{
+    width: 650px;
+    height: 700px;
+    border: solid;
+    background-color: white;
+}
+
+.sketchcontainer{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    display: flex;
+    width: 750px;
+    height: auto;
+    justify-content: space-between;
+    
+}
+
+.buttoncontainer{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+button{
+    width: 100px;
+    padding: 5px;
+}
+
+.footer{
+    color: red;
+}
