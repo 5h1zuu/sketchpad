@@ -5,19 +5,20 @@ body{
     background-color: beige;
 }
 
-
-
-.sketchpad{
+.sketchcontainer{
+    display: grid;
+    align-self: center;
     width: 650px;
     height: 700px;
     border: solid;
     background-color: white;
 }
 
-.sketchcontainer{
-    display: flex;
-    justify-content: center;
+.sketchpad{
+    display: grid;
+
 }
+
 
 .buttons{
     display: flex;
