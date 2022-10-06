@@ -1,11 +1,50 @@
-const container = document.querySelector('.container')
-const btnBlack = document.createElement('button')
-const btnGrey = document.createElement('button')
-const btnRGB = document.createElement('button')
-const btnSize = document.createElement('button')
-const buttonsContainer = document.querySelector('buttons')
+const sketchpad = document.querySelector('.sketchpad')
+const size = document.querySelector('.size')
+const color = document.querySelector('.color')
+const rgb = document.querySelector('.rgb')
+const eraser = document.querySelector('.eraser')
+const clear = document.querySelector('.clear')
+
+let userChoice = 0
 
 
-function createDivs(col, row){
+function createDiv(){
+    for (let i = 0; i < userChoice; i++){
+        let grid = document.createElement('div')
+        grid.classList.add('grid')
+        sketchpad.append(grid)
+
+    }
 
 }
+
+
+
+
+
+
+size.addEventListener('click', () =>{
+    user = prompt("Choose a number for you grid")
+    userChoice = user
+    createDiv()
+})
+
+
+color.addEventListener('click', () =>{
+    alert("color")
+})
+
+
+rgb.addEventListener('click', () =>{
+    alert("rgb")
+})
+
+
+eraser.addEventListener('click', () =>{
+    alert("eraser")
+})
+
+
+clear.addEventListener('click', () =>{
+    alert("clear")
+})

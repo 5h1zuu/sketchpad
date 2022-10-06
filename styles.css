@@ -1,9 +1,33 @@
 body{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
 }
 
 .sketchpad{
+    display: grid;
     width: 650px;
     height: 800px;
+    border: 1px solid black;
+    background: white;
+}
+
+
+.buttons{
+    display: flex;
+    width: 650px;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+button{
+    padding: 5px;
+    width: 100px;
+    height: auto;
+}
+
+.grid{
+    border: 1px solid black;
 }
