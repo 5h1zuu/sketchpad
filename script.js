@@ -8,6 +8,8 @@ const clear = document.querySelector('.clear')
 let userChoice = 0
 
 
+
+
 function createDiv(){
     for (let i = 0; i < userChoice; i++){
         let grid = document.createElement('div')
@@ -19,14 +21,11 @@ function createDiv(){
 }
 
 
-
-
-
-
 size.addEventListener('click', () =>{
     user = prompt("Choose a number for you grid")
     userChoice = user
     createDiv()
+    
 })
 
 

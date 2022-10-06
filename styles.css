@@ -7,12 +7,39 @@ body{
 }
 
 .sketchpad{
-    display: grid;
+    display: flex;
     width: 650px;
     height: 800px;
     border: 1px solid black;
     background: white;
+    flex-direction: column;
+    
 }
+
+.grid{
+    display: flex;
+    flex-grow: 3;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .buttons{
@@ -26,8 +53,4 @@ button{
     padding: 5px;
     width: 100px;
     height: auto;
-}
-
-.grid{
-    border: 1px solid black;
 }
