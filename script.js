@@ -40,16 +40,29 @@ createDiv()
 
 //how to reset grid each time new size is added
 
-
+function deleter(){
+    document.querySelectorAll('.square').forEach(e => e.remove());
+    document.querySelectorAll('.grid').forEach(e => e.remove())
+}
 
 
 
 size.addEventListener('click', () =>{
-    document.querySelectorAll('.square').forEach(e => e.remove());
-    document.querySelectorAll('.grid').forEach(e => e.remove())
+    deleter()
+    createDiv()
     user = prompt("Choose a number for you grid")
     userChoice = user
-    createDiv()
+    if (userChoice > 100){
+        alert("Error, too big to create")
+
+    }else{
+        deleter()
+        userChoice = user
+        createDiv()
+        
+    }
+    
+    
 
 })
 
@@ -61,7 +74,6 @@ color.addEventListener('click', () =>{
 
 
 clear.addEventListener('click', () =>{
-    document.querySelectorAll('.square').forEach(e => e.remove());
-    document.querySelectorAll('.grid').forEach(e => e.remove())
+    deleter()
     createDiv()
 })
