@@ -54,7 +54,8 @@ size.addEventListener('click', () =>{
     userChoice = user
     if (userChoice > 100){
         alert("Error, too big to create")
-
+    }else if (isNaN(`${userChoice}`) == true){
+        alert("Error, not a number")
     }else{
         deleter()
         userChoice = user
