@@ -49,6 +49,7 @@ size.addEventListener('click', () =>{
     document.querySelectorAll('.grid').forEach(e => e.remove())
     user = prompt("Choose a number for you grid")
     userChoice = user
+    createDiv()
 
 })
 
