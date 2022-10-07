@@ -3,7 +3,7 @@ const size = document.querySelector('.size')
 const color = document.querySelector('.color')
 const clear = document.querySelector('.clear')
 
-let userChoice = 0
+let userChoice = 16
 
 
 function createDiv(){
@@ -33,21 +33,23 @@ function createDiv(){
 }
 
 
-
+createDiv()
 
         
         
 
-
+//how to reset grid each time new size is added
 
 
 
 
 
 size.addEventListener('click', () =>{
+    document.querySelectorAll('.square').forEach(e => e.remove());
+    document.querySelectorAll('.grid').forEach(e => e.remove())
     user = prompt("Choose a number for you grid")
     userChoice = user
-    createDiv()
+
 })
 
 
@@ -58,5 +60,7 @@ color.addEventListener('click', () =>{
 
 
 clear.addEventListener('click', () =>{
-    alert('clear')
+    document.querySelectorAll('.square').forEach(e => e.remove());
+    document.querySelectorAll('.grid').forEach(e => e.remove())
+    createDiv()
 })
