@@ -5,7 +5,7 @@ const rgb = document.querySelector('.rgb')
 const eraser = document.querySelector('.eraser')
 const clear = document.querySelector('.clear')
 
-let userChoice = 0
+let userChoice = 16
 
 
 
@@ -16,23 +16,42 @@ function createDiv(){
         grid.classList.add('grid')
         sketchpad.append(grid)
 
+        
+        
         for (let j = 0; j < userChoice; j++){
             const square = document.createElement('div')
             square.setAttribute('id', 'innerSquare')
             square.classList.add('square')
             grid.appendChild(square)
-        }
 
+
+        
+        
+            function click(){
+            square.addEventListener('click', ()=>{
+                square.style.backgroundColor = "black"
+            })
+            }
+            click()
+    
+    
+    
+        } 
     }
-
 }
+
+
+
+
+
+
+
 
 
 size.addEventListener('click', () =>{
     user = prompt("Choose a number for you grid")
     userChoice = user
     createDiv()
-    
 })
 
 
