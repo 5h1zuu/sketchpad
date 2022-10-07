@@ -16,6 +16,13 @@ function createDiv(){
         grid.classList.add('grid')
         sketchpad.append(grid)
 
+        for (let j = 0; j < userChoice; j++){
+            const square = document.createElement('div')
+            square.setAttribute('id', 'innerSquare')
+            square.classList.add('square')
+            grid.appendChild(square)
+        }
+
     }
 
 }

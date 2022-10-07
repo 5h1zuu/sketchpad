@@ -22,25 +22,11 @@ body{
     border: 1px solid black;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.square{
+    display: flex;
+    flex-grow: 3;
+    border: 1px solid black;
+}
 
 .buttons{
     display: flex;
