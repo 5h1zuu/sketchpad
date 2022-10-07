@@ -13,19 +13,21 @@ body{
     border: 1px solid black;
     background: white;
     flex-direction: column;
+   
     
 }
 
 .grid{
     display: flex;
-    flex-grow: 3;
-    border: 1px solid black;
+    flex: 1;
+    
+    
 }
 
 .square{
     display: flex;
-    flex-grow: 3;
-    border: 1px solid black;
+    flex: 1;
+    
 }
 
 .buttons{

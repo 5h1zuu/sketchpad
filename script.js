@@ -5,7 +5,7 @@ const rgb = document.querySelector('.rgb')
 const eraser = document.querySelector('.eraser')
 const clear = document.querySelector('.clear')
 
-let userChoice = 16
+let userChoice = 0
 
 
 
@@ -15,7 +15,7 @@ function createDiv(){
         let grid = document.createElement('div')
         grid.classList.add('grid')
         sketchpad.append(grid)
-
+    
         
         
         for (let j = 0; j < userChoice; j++){
@@ -23,24 +23,52 @@ function createDiv(){
             square.setAttribute('id', 'innerSquare')
             square.classList.add('square')
             grid.appendChild(square)
+                    
+            color.addEventListener('click', () =>{
+                alert('color')
+            })
+            
+            
+            rgb.addEventListener('click', () =>{
+                alert('rainbow')
+            })
+            
+            
+            eraser.addEventListener('click', () =>{
+                alert('erase')
+            })
+            
+            
+            clear.addEventListener('click', () =>{
+                alert('clear')
+            })
+            
 
-
-        
-        
             function click(){
-            square.addEventListener('click', ()=>{
-                square.style.backgroundColor = "black"
+            square.addEventListener('mousemove', ()=>{
+            square.style.backgroundColor = "black"
             })
             }
             click()
-    
-    
-    
+            
+
+                    
+            function erase(){
+            square.addEventListener('mousemove', ()=>{
+            square.style.backgroundColor = "white"
+            })
+            }
+            
+            
         } 
     }
 }
 
 
+
+
+        
+        
 
 
 
@@ -55,21 +83,3 @@ size.addEventListener('click', () =>{
 })
 
 
-color.addEventListener('click', () =>{
-    alert("color")
-})
-
-
-rgb.addEventListener('click', () =>{
-    alert("rgb")
-})
-
-
-eraser.addEventListener('click', () =>{
-    alert("eraser")
-})
-
-
-clear.addEventListener('click', () =>{
-    alert("clear")
-})
