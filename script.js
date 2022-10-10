@@ -80,9 +80,10 @@ size.addEventListener('click', () =>{
     user = prompt("Choose a number for you grid")
     userChoice = user
     while (isNaN(`${userChoice}`) == true){
+        alert("Error, not a number")
         user = prompt("Choose a number for you grid")
         userChoice = user
-        alert("Error, not a number")
+        
     }
     while (userChoice > 100){
         alert("Error, too big to create")
