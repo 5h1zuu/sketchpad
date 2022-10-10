@@ -2,9 +2,12 @@ const sketchpad = document.querySelector('.sketchpad')
 const size = document.querySelector('.size')
 const color = document.querySelector('.color')
 const clear = document.querySelector('.clear')
+const rainbow = document.querySelector('.rainbow')
+const erase = document.querySelector('.erase')
+
 
 let userChoice = 16
-
+let value = ""
 
 function createDiv(){
     for (let i = 0; i < userChoice; i++){
@@ -22,7 +25,18 @@ function createDiv(){
             
             function click(){
             square.addEventListener('mousemove', ()=>{
-            square.style.backgroundColor = "black"
+                if (value == ""){
+                    square.style.backgroundColor = "black"
+                }
+                else if (value == "color"){
+                    square.style.backgroundColor = "black"
+                }
+                else if (value == "rainbow"){
+                    square.style.backgroundColor = `${rgb()}`
+                }
+                else if (value == "white" ){
+                    square.style.backgroundColor = "white"
+                }
             })
             }
             click()
@@ -32,17 +46,30 @@ function createDiv(){
     }
 }
 
+function rgb(){
+    let r = Math.floor(Math.random()*256)
+    let g = Math.floor(Math.random()*256)
+    let b = Math.floor(Math.random()*256)
+    rgbColor = "rgb(" + r + "," + g + "," + b +")" 
+    return rgbColor
+}
+
+
+
+
 
 createDiv()
 
-        
-        
-
-//how to reset grid each time new size is added
+    
 
 function deleter(){
     document.querySelectorAll('.square').forEach(e => e.remove());
     document.querySelectorAll('.grid').forEach(e => e.remove())
+}
+
+
+function colorChange(){
+
 }
 
 
@@ -52,26 +79,47 @@ size.addEventListener('click', () =>{
     createDiv()
     user = prompt("Choose a number for you grid")
     userChoice = user
-    if (userChoice > 100){
-        alert("Error, too big to create")
-    }else if (isNaN(`${userChoice}`) == true){
-        alert("Error, not a number")
-    }else{
-        deleter()
+    while (isNaN(`${userChoice}`) == true){
+        user = prompt("Choose a number for you grid")
         userChoice = user
-        createDiv()
-        
+        alert("Error, not a number")
     }
-    
+    while (userChoice > 100){
+        alert("Error, too big to create")
+        user = prompt("Choose a number for you grid")
+        userChoice = user
+    }
+    deleter()
+    userChoice = user
+    createDiv()
+        
     
 
 })
 
 
-color.addEventListener('click', () =>{
-    alert('color')
+
+
+
+
+
+
+
+
+
+color.addEventListener('click', () => { 
+    value = "color"
 })
 
+
+rainbow.addEventListener('click', () =>{
+    value = "rainbow"
+})
+
+
+erase.addEventListener('click', () => {
+    value = "white"
+})
 
 
 clear.addEventListener('click', () =>{
