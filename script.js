@@ -68,9 +68,6 @@ function deleter(){
 }
 
 
-function colorChange(){
-
-}
 
 
 
